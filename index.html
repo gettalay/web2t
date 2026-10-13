@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2ecdf" />
+    <meta name="description" content="Рабочий стол мастера D&D: бестиарий, гримуар, встреча и заметки в одном месте." />
+    <title>Пульт мастера — Подготовка к игре</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+    <script type="module" src="./main.js"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Основная навигация">
+        <a class="brand" href="#top" aria-label="Пульт мастера — на главную">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M20 3.5 34.2 11.7v16.6L20 36.5 5.8 28.3V11.7L20 3.5Z" stroke="currentColor" stroke-width="1.5"/><path d="m13.5 13.5 13 13m0-13-13 13" stroke="currentColor" stroke-width="1.3"/><circle cx="20" cy="20" r="3" fill="currentColor"/></svg>
+          </span>
+          <span class="brand-copy"><strong>Пульт</strong><small>мастера</small></span>
+        </a>
+
+        <div class="sidebar-label">КАМПАНИЯ</div>
+        <nav class="side-nav">
+          <a class="side-link is-active" href="#top"><span class="nav-symbol">⌂</span><span>Подготовка</span><span class="nav-pip"></span></a>
+          <a class="side-link" href="#widgets"><span class="nav-symbol">◈</span><span>Мои виджеты</span></a>
+          <a class="side-link" href="#sources"><span class="nav-symbol">⌘</span><span>Источники</span></a>
+        </nav>
+
+        <div class="sidebar-spacer"></div>
+        <div class="session-note">
+          <span class="session-note-icon" aria-hidden="true">✦</span>
+          <p>Каждая хорошая сессия начинается с одной заметки.</p>
+          <span class="session-note-line"></span>
+          <small>ПОЛЕВОЙ ЖУРНАЛ · № 01</small>
+        </div>
+        <div class="sidebar-foot"><span class="online-dot"></span> ЛИЧНЫЙ СТОЛ ВЕДУЩЕГО</div>
+      </aside>
+
+      <main class="main-area" id="top">
+        <header class="topbar">
+          <div class="crumbs"><span>КАМПАНИЯ</span><span class="crumb-sep">/</span><strong>ПОДГОТОВКА К ИГРЕ</strong></div>
+          <div class="topbar-right">
+            <span class="today-stamp" id="today-stamp">СЕГОДНЯ · —</span>
+            <span class="avatar-mark" aria-label="Мастер игры">М</span>
+          </div>
+        </header>
+
+        <section class="page-intro" aria-labelledby="page-title">
+          <div class="intro-copy">
+            <p class="eyebrow"><span class="eyebrow-mark"></span> ЗАПИСИ ВЕДУЩЕГО · СЕССИЯ 07</p>
+            <h1 id="page-title">Сначала мир.<br /><em>Потом бросок.</em></h1>
+            <p class="intro-text">Соберите встречу, пока герои ещё в пути. Существо, заклинание или хорошая идея — всё под рукой.</p>
+          </div>
+          <div class="intro-aside" aria-hidden="true">
+            <div class="sun-disc"><span></span></div>
+            <div class="intro-aside-caption"><span>СЕССИЯ</span><strong>07</strong><i>────────</i><small>заметки мастера</small></div>
+          </div>
+        </section>
+
+        <section class="widget-toolbar" aria-label="Добавить виджет">
+          <span class="toolbar-label">ДОБАВИТЬ НА СТОЛ</span>
+          <div class="toolbar-actions">
+            <button class="add-chip add-chip--bestiary" type="button" data-add-widget="bestiary"><span aria-hidden="true">＋</span> Бестиарий</button>
+            <button class="add-chip add-chip--grimoire" type="button" data-add-widget="grimoire"><span aria-hidden="true">＋</span> Гримуар</button>
+            <button class="add-chip" type="button" data-add-widget="todo"><span aria-hidden="true">＋</span> Заметки</button>
+            <button class="add-chip" type="button" data-add-widget="quote"><span aria-hidden="true">＋</span> Вдохновение</button>
+          </div>
+        </section>
+
+        <section class="workspace-section" id="widgets" aria-labelledby="workspace-title">
+          <div class="section-heading">
+            <div><p class="section-kicker">РАБОЧИЙ СТОЛ</p><h2 id="workspace-title">Перед началом приключения</h2></div>
+            <span class="widget-count" id="widget-count">0 ЗАПИСЕЙ</span>
+          </div>
+          <div class="widget-grid" id="widget-grid" aria-live="polite"></div>
+        </section>
+
+        <footer class="page-footer" id="sources">
+          <span>ДАННЫЕ ДЛЯ ИГРЫ</span>
+          <p>Материалы Wizards of the Coast: <a href="https://www.dndbeyond.com/srd" target="_blank" rel="noreferrer">SRD 5.1 (2014) и правила 2024</a>, лицензия <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>. Бестиарий: <a href="https://www.dnd5eapi.co/" target="_blank" rel="noreferrer">D&amp;D 5e API</a>; гримуар: <a href="https://open5e.com/sources/srd-2024" target="_blank" rel="noreferrer">Open5e</a>.</p>
+          <a class="footer-top" href="#top">К НАЧАЛУ ↑</a>
+        </footer>
+      </main>
+    </div>
+    <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>
